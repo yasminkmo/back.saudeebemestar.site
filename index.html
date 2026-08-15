@@ -3,22 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Espera! Oferta Especial - Desafio Pilates em Casa 50+</title>
+<title>Cupom de Desconto Ativado - Pilates em Casa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --forest: #35473C;
-    --forest-dark: #3A2E22;
     --sand: #F7F2E9;
     --cream: #FDFBF6;
-    --rose: #C97B84;
-    --rose-dark: #A65D66;
-    --gold: #BB8F4E;
     --ink: #2B2B26;
-    --ink-soft: #5C594F;
+    --ink-soft: #4A473E;
     --line: #E4DCC9;
+    --red: #D8262C;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   body{
@@ -26,345 +22,217 @@
     background:var(--cream);
     color:var(--ink);
     -webkit-font-smoothing:antialiased;
-    line-height:1.5;
+    line-height:1.65;
   }
-  h1,h2,h3,.serif{ font-family:'Fraunces', serif; }
-  img{max-width:100%; display:block;}
-  .wrap{ max-width:520px; margin:0 auto; padding:0 20px;}
+  .wrap{ max-width:640px; margin:0 auto; padding:0 18px;}
 
-  /* URGENCY TOP BAR */
   .topbar{
-    background:#D8262C;
+    background:var(--red);
     color:#fff;
     text-align:center;
-    padding:10px 16px;
-    font-size:13px;
-    font-weight:700;
+    padding:11px 16px;
+    font-size:13.5px;
+    font-weight:800;
     letter-spacing:.02em;
   }
-  .topbar span{ color:#FFE9BE; text-decoration:underline; }
 
-  /* HERO */
-  .hero{
-    background: var(--sand);
-    color:var(--ink);
-    padding:34px 0 40px;
-    text-align:center;
-    position:relative;
-    overflow:hidden;
+  header.hero{
+    background:var(--sand);
     border-bottom:1px solid var(--line);
+    padding:30px 0 26px;
+    text-align:center;
   }
-  .hero::before{
-    content:"";
-    position:absolute; top:-60px; right:-60px;
-    width:200px; height:200px; border-radius:50%;
-    background:rgba(201,123,132,0.08);
-  }
-  .eyebrow{
-    display:inline-flex; align-items:center; gap:6px;
+  .badge{
+    display:inline-block;
     background:#FBEDEC;
     border:1px solid #EFC9C7;
-    color:#D8262C;
-    font-size:12.5px; font-weight:800; letter-spacing:.06em;
-    text-transform:uppercase;
-    padding:6px 14px; border-radius:100px;
-    margin-bottom:18px;
-  }
-  .hero h1{
-    font-size:30px; font-weight:600; line-height:1.22;
-    margin-bottom:14px;
-    color:var(--ink);
-  }
-  .hero h1 em{ font-style:normal; color:#D8262C; }
-  .hero p.sub{
-    font-size:16px; color:var(--ink-soft); max-width:400px; margin:0 auto;
-    font-weight:400;
-  }
-  .hero p.sub em{ font-style:normal; color:#D8262C; font-weight:800; }
-
-  /* COUNTDOWN */
-  .countdown-box{
-    margin:24px auto 0; max-width:300px;
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:14px 18px;
-    box-shadow:0 6px 16px rgba(43,43,38,0.06);
-  }
-  .countdown-label{ font-size:11.5px; text-transform:uppercase; letter-spacing:.08em; color:#D8262C; margin-bottom:8px; font-weight:800;}
-  .countdown{ display:flex; justify-content:center; gap:10px; }
-  .cbox{ text-align:center; }
-  .cbox .num{
-    font-family:'Fraunces', serif; font-size:26px; font-weight:600;
-    background:#FBEDEC; border-radius:8px;
-    padding:6px 10px; min-width:44px; color:#D8262C;
-  }
-  .cbox .lbl{ font-size:10px; color:var(--ink-soft); margin-top:4px; text-transform:uppercase; letter-spacing:.05em;}
-
-  /* PRICE CARD */
-  .price-card{
-    background:var(--cream);
-    border-radius:18px;
-    margin:-26px auto 0;
-    max-width:460px;
-    position:relative;
-    box-shadow:0 14px 34px rgba(34,49,41,0.18);
-    padding:26px 22px 24px;
-    text-align:center;
-    border:1px solid var(--line);
-  }
-  .price-card .tag{
-    display:inline-block;
-    background:#D8262C;
-    color:#fff;
+    color:var(--red);
     font-weight:800;
     font-size:12.5px;
-    letter-spacing:.04em;
-    padding:6px 14px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    padding:6px 16px;
     border-radius:100px;
-    margin-bottom:14px;
+    margin-bottom:16px;
   }
-  .price-old{
-    font-size:16px; color:#A6A297; text-decoration:line-through; font-weight:600;
-  }
-  .price-new{
+  header.hero h1{
     font-family:'Fraunces', serif;
-    font-size:52px; font-weight:700; color:#D8262C;
-    line-height:1;
-    margin:6px 0 2px;
+    font-size:42px;
+    font-weight:900;
+    color:var(--red);
+    line-height:1.08;
+    letter-spacing:-0.01em;
   }
-  .price-new sup{ font-size:22px; top:-18px; }
-  .price-cents{ font-size:26px; }
-  .price-note{ font-size:13px; color:var(--ink-soft); margin-bottom:18px; }
+
+  main{ padding:30px 0 10px; }
+  main p{ font-size:19px; color:var(--ink-soft); margin-bottom:20px; line-height:1.7; text-align:left; }
+  main p strong{ color:var(--ink); font-size:1.12em; font-weight:800; }
+  main p strong.hl{ color:var(--red); font-size:1.12em; font-weight:900; }
+
+  .price-line{
+    text-align:center;
+    font-size:19px;
+    margin:30px auto;
+    color:var(--ink);
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:20px 16px;
+    max-width:420px;
+  }
+  .price-line .old{ text-decoration:line-through; color:#A6A297; font-size:16px; display:block; margin-bottom:4px;}
+  .price-line .new{
+    color:var(--red); font-weight:900;
+    font-family:'Fraunces', serif;
+    font-size:46px; display:block; margin:6px 0;
+    letter-spacing:-0.01em;
+  }
+  .price-line .inst{ font-size:17px; color:var(--ink-soft); }
 
   .cta-btn{
-    display:block; width:100%;
-    background:#D8262C;
+    display:block;
+    max-width:420px;
+    margin:0 auto 34px;
+    background:var(--red);
     color:#fff;
     font-family:'Nunito Sans', sans-serif;
-    font-weight:800; font-size:16.5px;
+    font-weight:900;
+    font-size:20px;
+    letter-spacing:.02em;
     text-align:center;
     text-decoration:none;
-    padding:16px 20px;
+    padding:21px 20px;
     border-radius:12px;
-    box-shadow:0 8px 18px rgba(216,38,44,0.35);
-    transition:transform .15s ease;
-    border:none;
-    cursor:pointer;
+    box-shadow:0 10px 22px rgba(216,38,44,0.35);
+    text-transform:uppercase;
   }
-  .cta-btn:active{ transform:scale(0.98); }
-  .cta-sub{
-    font-size:12px; color:var(--ink-soft); margin-top:10px;
-    display:flex; align-items:center; justify-content:center; gap:6px;
+  @keyframes pulseBtn{
+    0%{ box-shadow:0 0 0 0 rgba(216,38,44,0.55); }
+    70%{ box-shadow:0 0 0 16px rgba(216,38,44,0); }
+    100%{ box-shadow:0 0 0 0 rgba(216,38,44,0); }
   }
-
-  /* BONUS SECTION */
-  .section{ padding:38px 0 8px; }
-  .section-title{
-    text-align:center;
-    font-size:22px; font-weight:600; color:var(--forest-dark);
-    margin-bottom:6px;
-  }
-  .section-sub{
-    text-align:center; color:var(--ink-soft); font-size:14.5px;
-    margin-bottom:26px;
-  }
-
-  .bonus-list{ display:flex; flex-direction:column; gap:14px; margin-bottom:10px;}
-  .bonus-item{
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:16px;
-    display:flex; gap:14px; align-items:flex-start;
-  }
-  .bonus-item.highlight{
-    border:1.5px solid var(--gold);
-    background:linear-gradient(180deg,#FFFBF2 0%, #FDF6E6 100%);
-  }
-  .bonus-icon{
-    width:42px; height:42px; min-width:42px;
-    border-radius:10px;
-    background:var(--sand);
-    border:1px solid var(--line);
-    display:flex; align-items:center; justify-content:center;
-    font-size:19px;
-  }
-  .bonus-item.highlight .bonus-icon{ background:#F3E4C4; border-color:var(--gold); }
-  .bonus-text h3{
-    font-size:15.5px; font-weight:700; color:var(--ink); margin-bottom:3px;
-    font-family:'Nunito Sans', sans-serif;
-  }
-  .bonus-text p{ font-size:13.5px; color:var(--ink-soft); }
-  .bonus-badge{
-    display:inline-block; background:var(--gold); color:#fff;
-    font-size:10px; font-weight:800; letter-spacing:.04em;
-    text-transform:uppercase; padding:3px 8px; border-radius:100px;
-    margin-bottom:5px;
-  }
-
-  /* WHY LEAVING WARNING */
-  .warn-box{
-    background:#FBEDEC;
-    border:1px solid #EFC9C7;
-    border-radius:14px;
-    padding:16px 18px;
-    margin:26px 0;
-    font-size:13.5px;
-    color:#8A3A38;
-    display:flex; gap:10px; align-items:flex-start;
-  }
-  .warn-box b{ display:block; margin-bottom:2px; color:#7A2E2C;}
-
-  /* SIGNATURE MESSAGE */
-  .note{
-    background:#fff;
-    color:var(--ink);
-    border:1px solid var(--line);
-    border-radius:16px;
-    padding:22px 20px;
-    margin:30px 0;
-    position:relative;
-  }
-  .note .quote-mark{
-    font-family:'Fraunces', serif;
-    font-size:44px;
-    color:#D8262C;
-    line-height:0.5;
-    display:block;
-    margin-bottom:8px;
-  }
-  .note p{ font-size:14.5px; color:var(--ink-soft); line-height:1.6; }
-  .note .signee{
-    margin-top:14px; font-size:13px; font-weight:800; color:#D8262C;
-    letter-spacing:.02em;
-  }
-
-  /* FINAL CTA */
-  .final{
-    text-align:center;
-    padding:10px 0 40px;
-  }
-  .final h2{ font-size:21px; color:var(--forest-dark); margin-bottom:8px; font-weight:600;}
-  .final p{ font-size:14px; color:var(--ink-soft); margin-bottom:20px;}
-
-  .guarantee{
-    display:flex; align-items:center; justify-content:center; gap:8px;
-    font-size:12.5px; color:var(--ink-soft); margin-top:16px;
-  }
+  .cta-btn{ animation:pulseBtn 1.6s infinite; }
 
   footer{
-    text-align:center; padding:20px 20px 34px;
-    font-size:11px; color:#A6A297;
+    text-align:center;
+    padding:20px 20px 36px;
+    font-size:11px;
+    color:#A6A297;
     border-top:1px solid var(--line);
-  }
-
-  @media (min-width:480px){
-    .hero h1{ font-size:34px; }
-    .price-new{ font-size:58px; }
   }
 </style>
 </head>
 <body>
 
-  <div class="topbar">⚠️ <span>Oferta de saída</span> — disponível só nesta página, agora</div>
+  <div class="topbar">⚠️ CUPOM VÁLIDO SOMENTE NESTA PÁGINA</div>
 
-  <section class="hero">
+  <header class="hero">
     <div class="wrap">
-      <span class="eyebrow">🩰 Psiu, espera!</span>
-      <h1 style="color:#D8262C;">Eii, psiu! Não vai embora agora 🖐️</h1>
-      <p class="sub"><strong>Preparei uma oferta muito especial pra você.</strong> Pra você não deixar de participar do desafio, tô te dando <em>40% de desconto</em> — só aqui, só agora.</p>
-
-      <div class="countdown-box">
-        <div class="countdown-label">Essa condição expira em</div>
-        <div class="countdown" id="countdown">
-          <div class="cbox"><div class="num" id="min">10</div><div class="lbl">min</div></div>
-          <div class="cbox"><div class="num" id="sec">00</div><div class="lbl">seg</div></div>
-        </div>
-      </div>
+      <h1>Cupom de desconto ativado apenas hoje!</h1>
     </div>
-  </section>
+  </header>
 
   <div class="wrap">
-    <div class="price-card">
-      <span class="tag">40% OFF só agora</span>
-      <div class="price-old">De R$ 29,90</div>
-      <div class="price-new"><sup>R$</sup>17<span class="price-cents">,00</span></div>
-      <div class="price-note">Pagamento único · acesso imediato</div>
+    <main>
+      <p>Parabéns, você foi selecionada e acaba de ganhar <strong class="hl">40% de desconto</strong> no <strong>Pilates em Casa</strong>!</p>
 
-      <a href="#" class="cta-btn" id="ctaBtn">Quero garantir por R$ 17,00</a>
-      <div class="cta-sub">🔒 Compra 100% segura</div>
-    </div>
-  </div>
+      <p>Eu não quero que o dinheiro seja um problema quando se trata de alcançar o corpo ideal...</p>
 
-  <div class="wrap">
-    <section class="section">
-      <h2 class="section-title">Fechando agora, você leva tudo isso</h2>
-      <p class="section-sub">Essa combinação de bônus não vai aparecer de novo depois que você sair.</p>
+      <p>É por isso que estamos comprometidos em oferecer soluções acessíveis e eficazes para você...</p>
 
-      <div class="bonus-list">
-        <div class="bonus-item highlight">
-          <div class="bonus-icon">🔥</div>
-          <div class="bonus-text">
-            <span class="bonus-badge">Exclusivo desta página</span>
-            <h3>E-book "Desbloqueie o Metabolismo"</h3>
-            <p>Bônus liberado porque você ficou até agora: estratégias simples para dar um empurrão a mais no seu metabolismo depois dos 50.</p>
-          </div>
-        </div>
+      <p>E para tornar as coisas ainda melhores, temos uma oferta especial que pode ser exatamente o que você estava procurando!</p>
 
-        <div class="bonus-item">
-          <div class="bonus-icon">🩰</div>
-          <div class="bonus-text">
-            <h3>Desafio Pilates em Casa 50+</h3>
-            <p>Programa completo de 30 dias, com vídeo-aulas guiadas, sem impacto e sem precisar sair de casa.</p>
-          </div>
-        </div>
+      <p>Acreditamos que todos merecem a chance de aproveitar os benefícios do <strong>Pilates em Casa</strong> sem que o custo seja um empecilho...</p>
 
-        <div class="bonus-item">
-          <div class="bonus-icon">🥗</div>
-          <div class="bonus-text">
-            <h3>Guia Alimentar Bônus</h3>
-            <p>Cardápio simples pensado pra apoiar seus resultados junto com o desafio — incluso sem custo extra.</p>
-          </div>
-        </div>
+      <p>Por essa razão, criamos um programa exclusivo em que selecionamos aleatoriamente uma pessoa a cada 50 visitantes de nossa página para receber uma oferta especial.</p>
 
-        <div class="bonus-item">
-          <div class="bonus-icon">♾️</div>
-          <div class="bonus-text">
-            <h3>Acesso vitalício ao app</h3>
-            <p>Entre quando quiser, refaça os treinos quantas vezes precisar. Sem mensalidade, sem prazo pra acabar.</p>
-          </div>
-        </div>
+      <p>E, acredite ou não, desta vez você foi a <strong>sortuda escolhida</strong>!</p>
+
+      <p>Gostaríamos de lhe dar a oportunidade única de adquirir o <strong>Pilates em Casa</strong> com um <strong class="hl">desconto incrível de 40%</strong>!</p>
+
+      <p>Essa é a nossa forma de mostrar o quanto valorizamos a sua presença e acreditamos no potencial transformador do nosso produto...</p>
+
+      <p>Não queremos que você deixe essa chance escapar, pois sabemos que essa oferta é um passo importante em direção ao corpo dos seus sonhos...</p>
+
+      <p>Com o <strong>Pilates em Casa</strong>, você terá acesso a recursos e tecnologias avançadas que irão ajudá-la a atingir seus objetivos de forma eficiente e segura...</p>
+
+      <p>Aproveite essa oportunidade única de adquirir o <strong>Pilates em Casa</strong> com <strong class="hl">40% de desconto</strong> e comece a trilhar o caminho para alcançar o corpo ideal que você sempre desejou...</p>
+
+      <p>Estamos aqui para apoiá-la em cada etapa dessa jornada...</p>
+
+      <p>Não deixe que o dinheiro seja um obstáculo para o seu sucesso pessoal...</p>
+
+      <p>Garanta agora mesmo o seu <strong>Pilates em Casa</strong> com esse <strong class="hl">desconto especial</strong> e dê um impulso extraordinário aos seus esforços de transformação corporal...</p>
+
+      <p>Seja bem-vinda à nossa comunidade de pessoas comprometidas em buscar a melhor versão de si mesmas...</p>
+
+      <p>Junte-se a nós e experimente os resultados incríveis que o <strong>Pilates em Casa</strong> pode proporcionar!</p>
+
+      <div class="price-line">
+        <span class="old">De R$ 29,90</span>
+        <span>por apenas</span>
+        <span class="new">R$ 17,00</span>
+        <span class="inst">ou <strong class="hl">3x de R$ 6,07</strong></span>
       </div>
-    </section>
 
-    <div class="warn-box">
-      <span>⏳</span>
-      <div><b>Essa página some quando o tempo zerar.</b> O preço volta ao valor cheio e o e-book bônus não fica mais disponível.</div>
-    </div>
+      <a href="#" class="cta-btn" id="ctaBtn1">Comprar agora!</a>
 
-    <div class="note">
-      <span class="quote-mark">"</span>
-      <p>Eu sei que às vezes falta só um empurrãozinho pra começar. Por isso resolvi abrir essa condição especial — pra você não ficar mais um dia adiando o seu cuidado com o corpo. Te espero do outro lado.</p>
-      <div class="signee">— Lais Barbosa</div>
-    </div>
+      <p>Essa opção abrirá uma nova e emocionante etapa em sua vida, repleta de prazeres e realizações!</p>
 
-    <section class="final">
-      <h2>Não deixe pra depois de novo</h2>
-      <p>R$ 17,00 · acesso imediato · leve os 4 bônus</p>
-      <a href="#" class="cta-btn" id="ctaBtn2">Sim, quero começar agora</a>
-      <div class="guarantee">🛡️ Garantia de satisfação</div>
-    </section>
+      <p>Agora, permita-me levar sua imaginação a um lugar extraordinário...</p>
+
+      <p>Imagine descobrir um segredo genuíno capaz de transformar seu corpo, ao mesmo tempo em que liberta você do estresse e da ansiedade que podem pesar em sua vida diária...</p>
+
+      <p>Visualize como sua vida se tornará significativamente melhor: uma vida repleta de <strong>felicidade, autoconfiança renovada</strong> e todos os outros benefícios positivos que o <strong>Pilates em Casa</strong> tem para oferecer...</p>
+
+      <p>Estamos falando de <strong>resultados verdadeiramente excepcionais</strong>, resultados que você simplesmente não encontrará em nenhum outro lugar...</p>
+
+      <p>A combinação única de inovação, pesquisa científica avançada e compromisso com a sua transformação pessoal faz do <strong>Pilates em Casa</strong> uma escolha incomparável...</p>
+
+      <p>Imagine-se aproveitando uma sensação incomparável de vitalidade e bem-estar, enquanto desfruta de uma aparência física deslumbrante...</p>
+
+      <p>O <strong>Pilates em Casa</strong> é projetado para trazer resultados notáveis, superando todas as suas expectativas anteriores...</p>
+
+      <p>Acredite, você merece essa experiência excepcional...</p>
+
+      <p>Não permita que a incerteza ou a dúvida o impeçam de alcançar o sucesso que você tanto almeja...</p>
+
+      <p>Agarre essa <strong class="hl">oportunidade única</strong> de mudar sua vida para sempre...</p>
+
+      <p>Os resultados que o <strong>Pilates em Casa</strong> oferece são incomparáveis e verdadeiramente transformadores...</p>
+
+      <p>Não há limites para o que você pode alcançar quando você se compromete com essa jornada...</p>
+
+      <p>Não se contente com menos do que você merece...</p>
+
+      <p>Abra as portas para uma vida extraordinária, repleta de prazeres, conquistas e autoconfiança...</p>
+
+      <p>O <strong>Pilates em Casa</strong> é a chave para essa jornada inigualável de transformação...</p>
+
+      <p><strong>Não espere mais...</strong></p>
+
+      <p>Permita-se embarcar nesta incrível jornada e descobrir o poder de uma transformação pessoal completa e duradoura...</p>
+
+      <p>Os resultados esperam por você…</p>
+
+      <div class="price-line">
+        <span class="old">De R$ 29,90</span>
+        <span>por apenas</span>
+        <span class="new">R$ 17,00</span>
+        <span class="inst">ou <strong class="hl">3x de R$ 6,07</strong></span>
+      </div>
+
+      <a href="#" class="cta-btn" id="ctaBtn2">Comprar agora!</a>
+    </main>
   </div>
 
   <footer>
-    Oferta válida enquanto o cronômetro desta página estiver ativo.<br>
-    Desafio Pilates em Casa 50+ — Todos os direitos reservados.
+    Oferta válida enquanto o cupom desta página estiver ativo.<br>
+    Pilates em Casa — Todos os direitos reservados.
   </footer>
 
 <script>
   // ==== LINK DE CHECKOUT ====
-  // Troque pela sua URL real de checkout (Kiwify/Hotmart/Atlas) com o valor de R$17
   const checkoutUrl = 'https://pay.kiwify.com.br/iyBrZmg';
 
   function buildUrlWithParams(base){
@@ -372,28 +240,9 @@
     return base.trim() + (base.indexOf('?') > 0 ? '&' : '?') + params;
   }
 
-  document.querySelectorAll('#ctaBtn, #ctaBtn2').forEach(function(btn){
+  document.querySelectorAll('#ctaBtn1, #ctaBtn2').forEach(function(btn){
     btn.href = buildUrlWithParams(checkoutUrl);
   });
-
-  // ==== COUNTDOWN 10 MINUTOS ====
-  let totalSeconds = 10 * 60;
-  const minEl = document.getElementById('min');
-  const secEl = document.getElementById('sec');
-
-  function tick(){
-    if (totalSeconds <= 0){
-      minEl.textContent = '00';
-      secEl.textContent = '00';
-      return;
-    }
-    totalSeconds--;
-    const m = Math.floor(totalSeconds / 60);
-    const s = totalSeconds % 60;
-    minEl.textContent = String(m).padStart(2,'0');
-    secEl.textContent = String(s).padStart(2,'0');
-  }
-  setInterval(tick, 1000);
 </script>
 
 </body>
